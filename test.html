@@ -12,7 +12,8 @@ function Game() {
   this.car = this.randDoor();
   this.goat = [1, 2, 3].filter(el => el !== this.car);
   this.choice = this.randDoor();
-  this.play = console.log(`car is ${this.car}; goats are ${this.goat.pop()} and ${this.goat.pop()}; the computer chose ${this.choice}`);
+  this.doorsThatCanBeOpened = [1, 2, 3].filter(el => el !== this.choice).filter(el => el !== this.car);
+  this.play = console.log(`car is ${this.car}; goats are ${this.goat.pop()} and ${this.goat.pop()}; the computer chose ${this.choice}; these are the doors that can be opened: ${this.doorsThatCanBeOpened}`);
 }
 
   </script>
