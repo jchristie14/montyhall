@@ -23,3 +23,19 @@ function Game() {
     opened ${this.openDoor()}
     ${this.finalChoice()}`);
 }
+
+function Counter() {
+  this.switchWin = 0;
+  this.stayWin = 0;
+}
+
+function playMultiple(times) {
+  const currentCounter = new Counter();
+  for (let i = 0; i < times; i += 1) {
+    const game = new Game();
+    if (game.wonIfYouSwitched) {
+      currentCounter.switchWin += 1;
+    } else { currentCounter.stayWin += 1; }
+  }
+  return currentCounter;
+}
