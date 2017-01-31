@@ -83,3 +83,18 @@ function chartGames(games) {
       .attr('dy', '.35em')
       .text(d => (d.index === 0 ? `${d.data} people won if they switched.` : `${d.data} people won if they stayed`));
 }
+
+function test(ev) {
+  ev.preventDefault();
+  const numberOfSims = parseInt(document.getElementById('simNumber').value, 10);
+
+  // console.log(numberOfSims+' submitted');
+  chartGames(numberOfSims);
+  this.reset();
+}
+
+function subButton() {
+  document.getElementById('simForm').onsubmit = test;
+}
+
+window.onload = subButton;
