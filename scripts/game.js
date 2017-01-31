@@ -17,13 +17,13 @@ function Game() {
     return 'You won if you switched!!!';
   };
   this.wonIfYouSwitched = this.choice !== this.car;
-  this.play = console.log(`
-    car is ${this.car}; 
-    goats are ${this.goat.pop()} and ${this.goat.pop()};
-    the computer chose ${this.choice};
-    these are the doors that can be opened: ${this.doorsThatCanBeOpened};
-    opened ${this.openDoor()}
-    ${this.finalChoice()}`);
+  // this.play = console.log(`
+  //   car is ${this.car};
+  //   goats are ${this.goat.pop()} and ${this.goat.pop()};
+  //   the computer chose ${this.choice};
+  //   these are the doors that can be opened: ${this.doorsThatCanBeOpened};
+  //   opened ${this.openDoor()}
+  //   ${this.finalChoice()}`);
 }
 
 function Counter() {
