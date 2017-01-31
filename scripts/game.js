@@ -37,5 +37,10 @@ function playMultiple(times) {
       currentCounter.switchWin += 1;
     } else { currentCounter.stayWin += 1; }
   }
-  return currentCounter;
+  return [currentCounter.switchWin, currentCounter.stayWin];
 }
+
+
+
+
+
