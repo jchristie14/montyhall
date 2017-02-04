@@ -1,5 +1,9 @@
 /* global d3 */
 
+//import * as d3 from 'd3';
+
+import {scaleLinear} from "d3-scale";
+
 function Game() {
   this.randDoor = () => Math.floor((Math.random() * 3) + 1);
   this.car = this.randDoor();
