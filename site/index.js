@@ -1,6 +1,20 @@
 const express = require('express');
+// const webpackDevMiddleware = require('webpack-dev-middleware');
+// const webpack = require('webpack');
+// const webpackConfig = require ('./webpack.config');
 
 const app = express();
+// const compiler = webpack(webpackConfig);
+
+// const watching = compiler.watch({
+//   watch: true
+// }, (err, stats) => {
+//   console.log(stats);
+// });
+
+// app.use(webpackDevMiddleware(compiler, {
+//   publicPath: 'output.publicPath'
+// }));
 
 app.use(express.static('public'));
 

@@ -1,6 +1,6 @@
 /* global d3 */
 
-import { scaleOrdinal } from 'd3-scale';
+import * as d3 from 'd3';
 
 function Game() {
   this.randDoor = () => Math.floor((Math.random() * 3) + 1);
@@ -90,13 +90,13 @@ function test(ev) {
   ev.preventDefault();
   const numberOfSims = parseInt(document.getElementById('simNumber').value, 10);
 
-  // console.log(numberOfSims+' submitted');
+  console.log(numberOfSims+' Submitted');
   chartGames(numberOfSims);
   this.reset();
 }
 
 function subButton() {
-  document.getElementById('simForm').addEventListener('submit', test());
+  document.getElementById('simForm').addEventListener('submit', test);
 }
 
 window.onload = subButton;
