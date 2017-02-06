@@ -1,8 +1,6 @@
 /* global d3 */
 
-//import * as d3 from 'd3';
-
-import {scaleLinear} from "d3-scale";
+import { scaleOrdinal } from 'd3-scale';
 
 function Game() {
   this.randDoor = () => Math.floor((Math.random() * 3) + 1);
@@ -98,7 +96,7 @@ function test(ev) {
 }
 
 function subButton() {
-  document.getElementById('simForm').onsubmit = test;
+  document.getElementById('simForm').addEventListener('submit', test());
 }
 
 window.onload = subButton;

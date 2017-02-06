@@ -5493,8 +5493,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_d3_scale__ = __webpack_require__(55);
 /* global d3 */
 
-//import * as d3 from 'd3';
-
 
 
 function Game() {
@@ -5591,7 +5589,7 @@ function test(ev) {
 }
 
 function subButton() {
-  document.getElementById('simForm').onsubmit = test;
+  document.getElementById('simForm').addEventListener('submit', test());
 }
 
 window.onload = subButton;
