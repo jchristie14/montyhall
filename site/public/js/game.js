@@ -90,7 +90,7 @@ function test(ev) {
   ev.preventDefault();
   const numberOfSims = parseInt(document.getElementById('simNumber').value, 10);
 
-  console.log(numberOfSims+' Submitted');
+  //console.log(numberOfSims+' Submitted');
   chartGames(numberOfSims);
   this.reset();
 }
